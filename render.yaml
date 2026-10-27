@@ -1,0 +1,15 @@
+services:
+  - type: worker
+    name: tiktok-bot
+    runtime: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
+      - key: DB_URL
+        value: sqlite+aiosqlite:///data/bot.db
+      - key: POLL_INTERVAL_SEC
+        value: "600"
