@@ -1,5 +1,5 @@
 aiogram>=3.4,<4
-SQLAlchemy>=2.0
+SQLAlchemy[asyncio]>=2.0
 aiosqlite
 yt-dlp
 python-dotenv
